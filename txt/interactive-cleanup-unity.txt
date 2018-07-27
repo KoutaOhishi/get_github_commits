@@ -1,0 +1,35 @@
+Update: Modify project setting files
+BugFix: Change a timing of closing ROS connections.
+Update: Modify VR controller scripts and modify config files of sample sessions.
+Add: Deduct when task fails
+Update: Delete Give_up message by avatar and add Give_up message by robot controller
+Update: Change the time limit from 600 to 360
+Update: Fix a bug of start time of avatar motion.
+Update: Move methods related to the time management
+Update: ROS Connections are not disconnected for each trial.
+Update: Change the timing to wait for start.
+Update: Modify flow of the task
+Update: Update version of Oculus Utilities for Unity
+Update: Add flow of sending Object_grasped
+Update: Restrict the timing to give up
+Add: add options to the playback transform function.
+Update: Change scoring formula
+Update: change tag list
+Add: Add a new event of the object collision
+Update: Make several methods common.
+Add: Brighten the moderator color
+Remove: Delete prefabs of graspable objects. Because moved them to common-unity.
+Remove: Delete prefabs of graspable objects. Because moved them to common-unity.
+Update: change camera and quality parameters.
+Add: display the task message when replaying.
+Update: change value of Fixed timestep
+Add: Implement specification that does not deduct points by collision with some colliders
+Update: Detach unused script
+Update: update sample data.
+Update: Change rigidbody position of HSR in hierarchy.
+modify: refactoring
+Add a deduction point functions that is used when the graspable objects collide
+Replace sample avatar motion data.
+Add common playback functions and common panels.
+Modify to inherit new playback classes.
+Modify playback functions.

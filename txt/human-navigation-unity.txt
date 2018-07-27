@@ -1,0 +1,35 @@
+Modify example scene
+Modify text-to-speech to make it use the external executable file
+Add configuration files
+Update for pre-event
+Modify an object label according to the announced object label list
+Modify the room layout of a sample scene
+Modify the gitignore to prepare resources for the pre-event
+Modify parameters of Simple Human VR controller according to the modification of common-unity
+Modify to record and replay the score
+Cleanup some script (delete some codes commented out)
+Modify the penalty points when the incorrect object is grasped
+Modify some object labels and prefabs
+Add prefabs of furniture, Modify labels of objects in the example scene
+Fix: to reset the score when the session starts
+Modify process to send TaskInfo (object labels are sent instead of object IDs)
+Add recording and playback functions
+Add a process to truncate the excess characters of guidance messages when their length exceeds the limitation.
+Modify the robot prefab and layer of GUI for the avatar
+Modify the moderator and the configuration file
+Modify ROS message type for guidance messages, Add functions to control the display type of guidance message panels for the avatar
+Add: guidance message panels for the avatar
+Update: to adapt to the common unity (commit ver.:0db83ace1e42992a1453bab4278b76577a455dfb)
+Update: modified names of some class and functions for adopting latest common-unity
+Update to adapt for modification of common unity
+Comment out an unreachable process and an unused variable
+Modified namespace and names of event handlers
+Add processes to publish the state of text-to-speech according to requests from the robot controller
+Modify the position of a bird's eye camera
+Add an example to send the pose of the HumanNaviAvatar, and processes to convert coordinate systems from a left-handed system (Unity) to a right-handed system (ROS)
+Fix bugs of the editor extension in NewtonVR
+Modify rigidbody of the avatar to apply gravity
+Add colliders to limit movable areas of the robot and avatar
+Merge branch 'master' of https://github.com/PartnerRobotChallengeVirtual/human-navigation-unity
+Modify the structure of HumanNaniAvatar, a function for resetting avatar's position, and the structure of a cabinet in the example environment
+Add WRC information
