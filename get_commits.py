@@ -77,27 +77,20 @@ def test():
 
 def main():
     repo_list = {
-        "documents":"https://github.com/PartnerRobotChallengeVirtual/documents/commits/",
+        "documents":"https://github.com/KoutaOhishi/get_github_commits/commits/",
         "human-navigation-unity":"https://github.com/PartnerRobotChallengeVirtual/human-navigation-unity/commits/",
         "interactive-cleanup-unity":"https://github.com/PartnerRobotChallengeVirtual/interactive-cleanup-unity/commits/"
 
     }
 
-    slack_token = "xoxp-41888577685-164597196115-360693330051-bba97f8524c1065e466011d7535de70a"
-
-    flag = 0
-
     for i in repo_list:
         #print i
-        print repo_list[i]
+        #print repo_list[i]
         res = get_commits_list(i, repo_list[i])
         if res == False:
             """新しいcommitの通知"""
             slack_notice(i, repo_list[i])
-            flag = 1
 
-    if flag == 0:
-        test()
 
 
 if __name__ == "__main__":
