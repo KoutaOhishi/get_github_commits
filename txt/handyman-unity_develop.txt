@@ -1,0 +1,35 @@
+Update: Modify .gitignore
+Update: Modify the Handyman scene file
+Modify README.md
+Update: Add comments about config files to README.
+Update: Modify comments about pre-event to README.
+Update: Add comments about pre-event to README.
+Update: Add new scenes and config files for pre-event
+Update: Add config files of pre-event
+Update: Modify project setting files
+Fix: Change a timing of closing ROS connections.
+Update: Modify task message of sample sessions.
+Add functions about moving obstacles and modify config files of sample sessions.
+Add: Deduct when task fails
+Update: Add functions of target confirmation.
+Add: Add new message about environment
+Update: Change tags of grasping candidates
+Update: Move methods related to the time management
+Update: ROS Connections are not disconnected for each trial.
+Update: Change the timing to wait for start.
+Update: Modify flow of the task
+Update: Restrict the timing to receive messages
+Update: Restrict the timing to give up
+Update: change API version
+Update: Change scoring formula
+Update: change tag list
+Update: Adjust FOV of the HSR
+Add: Add a new event of the object collision
+Update: Make several methods common.
+Update: Change the judgement specification of the delivery to the moderator.
+Remove: Delete prefabs of graspable objects. Because moved them to common-unity.
+Update: change camera and quality parameters.
+Add: display the task message when replaying.
+Update: change value of Fixed timestep
+Update: change positions of trashbox
+Add: Implement specification that does not deduct points by collision with some colliders

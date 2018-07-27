@@ -1,0 +1,11 @@
+Modify an object label in the example according to the announced object label list
+Modify a label of a target object in the example code
+Modify a label name of a target object in the example
+Modify the example to adapt to the coordinate system in ROS
+Modify message definition for the guidance message and add an example to set the display type of guidance message panels for the avatar
+Modify example commands in keyboard teleoperation and add give_up command from the robot
+Add processes to check state of text-to-speech
+Merge branch 'master' of https://github.com/PartnerRobotChallengeVirtual/human-navigation-ros
+Add an example to request and subscribe the pose of an avatar
+Add WRC information
+first commit

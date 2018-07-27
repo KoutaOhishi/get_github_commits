@@ -1,0 +1,35 @@
+Update: Modify .gitignore
+Add: New config parameter called log file name is added.
+Update: Change the namespace of HSRRigidbodyInitializer.cs
+Update: Delete Apple.physicMaterial
+Update: Delete espressokettle from the sample scene
+Modify 3D models and some scripts
+Update: Add comments about pre-event to README.
+Update: Use a tag to narrow down postures to record.
+Add: Add new 3D models
+Update: Modify VR controller scripts and some models
+Update: Use time synchronization function to connect SIGVerse Rosbridge
+Update: Disable GiveUp button on the main panel
+Update: Fix a bug of sending sensor data after connection closed
+Update:  Add a flag about using thread that is used when sending sensor data.
+Update: Move methods related to the time management
+Update: ROS Connections are not disconnected for each trial.
+Update: Fix bug that occurs when there is no EventSystem in the scene.
+Update: Change timing of the SIGVerse auto starting
+Update: Stabilize the gripping behavior more.
+Delete: delete unused files
+rename the ROS related files
+Update: Add functions of the ROS connection and rename namespace
+Add: Modified the robot to be able to move sideways.
+Update: Stabilize the gripping behavior more.
+Update: Fixed a bug that JointTrajectory calculation does not end
+Change: Modify HSRPubSynchronizer.
+Update: Change timing of the reset parameters of HSRPubSynchronizer.
+Update: change API version
+Add: add options to the playback transform function.
+Update: Refine meshes of some dolls
+Update: Send the sensor data in OnPostRender
+Update: Change scoring formula and add colliders to HSR
+Add: Add scripts for collision
+Update: Adjust FOV of the HSR
+Add: Add a new event of the object collision

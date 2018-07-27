@@ -52,7 +52,7 @@ def slack_notice(repo_name, URL):
 
     web_hook = "https://hooks.slack.com/services/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"
 
-    message = "New Commits!\n" + repo_name + "[" + URL + "]"
+    message = "New Commits!\n" + repo_name + " : [" + URL + "]"
 
     requests.post(web_hook, data = json.dumps({
         'text': message, # 投稿するテキスト
@@ -77,10 +77,19 @@ def test():
 
 def main():
     repo_list = {
-        "documents":"https://github.com/KoutaOhishi/get_github_commits/commits/",
+        "documents":"https://github.com/PartnerRobotChallengeVirtual/documents/commits/",
         "human-navigation-unity":"https://github.com/PartnerRobotChallengeVirtual/human-navigation-unity/commits/",
-        "interactive-cleanup-unity":"https://github.com/PartnerRobotChallengeVirtual/interactive-cleanup-unity/commits/"
-
+        "human-navigation-unity_develop":"https://github.com/PartnerRobotChallengeVirtual/human-navigation-unity/commits/develop",
+        "interactive-cleanup-unity":"https://github.com/PartnerRobotChallengeVirtual/interactive-cleanup-unity/commits/",
+        "interactive-cleanup-unity_develop":"https://github.com/PartnerRobotChallengeVirtual/interactive-cleanup-unity/commits/develop",
+        "common-unity":"https://github.com/PartnerRobotChallengeVirtual/common-unity",
+        "common-unity_develop":"https://github.com/PartnerRobotChallengeVirtual/common-unity/commits/develop",
+        "handyman-unity":"https://github.com/PartnerRobotChallengeVirtual/handyman-unity/commits",
+        "handyman-unity_develop":"https://github.com/PartnerRobotChallengeVirtual/handyman-unity/commits/develop",
+        "console-simple-tts":"https://github.com/PartnerRobotChallengeVirtual/console-simple-tts/commits",
+        "interactive-cleanup-ros":"https://github.com/PartnerRobotChallengeVirtual/interactive-cleanup-ros/commits",
+        "handyman-ros":"https://github.com/PartnerRobotChallengeVirtual/handyman-ros/commits",
+        "human-navigation-ros":"https://github.com/PartnerRobotChallengeVirtual/human-navigation-ros/commits"
     }
 
     for i in repo_list:
@@ -90,6 +99,7 @@ def main():
         if res == False:
             """新しいcommitの通知"""
             slack_notice(i, repo_list[i])
+
 
 
 

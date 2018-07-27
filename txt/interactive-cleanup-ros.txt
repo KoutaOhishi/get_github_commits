@@ -1,0 +1,12 @@
+Add: Add a command to send Give_up message
+Update: Clear message status when receive task finishing message
+Update: Change to send I_am_ready manually
+Add: Modified the robot to be able to move sideways
+Update: Add flow of sending Object_grasped
+Update: Add the speed control function to teleop_key.
+Add: add stereo camera windows to rviz file.
+Change lowest angle of gripper.
+Add a link of wiki page.
+Modify gitignore
+Add WRC information
+first commit
