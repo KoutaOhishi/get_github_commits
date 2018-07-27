@@ -66,7 +66,7 @@ def test():
 
     web_hook = "https://hooks.slack.com/services/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"
 
-    message = "hello"
+    message = "新しいcommitはありません"
 
     requests.post(web_hook, data = json.dumps({
         'text': message, # 投稿するテキスト
@@ -96,7 +96,7 @@ def main():
             slack_notice(i, repo_list[i])
             flag = 1
 
-    if flag = 0:
+    if flag == 0:
         test()
 
 
