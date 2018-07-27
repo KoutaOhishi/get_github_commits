@@ -2,6 +2,7 @@
 #!/usr/bin/env python
 
 import requests, bs4, os
+import json
 
 def get_commits_list(repo_name, URL):
     res = requests.get(URL)
@@ -13,7 +14,7 @@ def get_commits_list(repo_name, URL):
     new_commit_list = []
     old_commit_list = []
 
-    file_path = "txt/" + repo_name + ".txt"
+    file_path = "./txt/" + repo_name + ".txt"
 
     f_r = open(file_path, "r")
 
@@ -33,6 +34,7 @@ def get_commits_list(repo_name, URL):
 
     if new_commit_list == old_commit_list:
         print "There are no new commits."
+        return True
 
     else:
         print "There are some NEW commits."
@@ -43,7 +45,33 @@ def get_commits_list(repo_name, URL):
             f_w.write(str(i) + "\n")
 
         f_w.close()
+        return False
 
+def slack_notice(repo_name, URL):
+    slack_token = "xoxp-41888577685-164597196115-360693330051-bba97f8524c1065e466011d7535de70a"
+
+    web_hook = "https://hooks.slack.com/services/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"
+
+    message = "New Commits!\n" + repo_name + "[" + URL + "]"
+
+    requests.post(web_hook, data = json.dumps({
+        'text': message, # 投稿するテキスト
+        'username': u'Ghost', # 投稿のユーザー名
+        'icon_emoji': u':ghost:', # 投稿のプロフィール画像に入れる絵文字
+        'link_names': 1, # メンションを有効にする
+    }))
+
+def test():
+    slack_token = "xoxp-41888577685-164597196115-360693330051-bba97f8524c1065e466011d7535de70a"
+
+    web_hook = "https://hooks.slack.com/services/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"
+
+    requests.post(web_hook, data = json.dumps({
+        'text': u'新しいcommitはありません', # 投稿するテキスト
+        'username': u'Ghost', # 投稿のユーザー名
+        'icon_emoji': u':ghost:', # 投稿のプロフィール画像に入れる絵文字
+        'link_names': 1, # メンションを有効にする
+    }))
 
 def main():
     repo_list = {
@@ -55,12 +83,19 @@ def main():
 
     slack_token = "xoxp-41888577685-164597196115-360693330051-bba97f8524c1065e466011d7535de70a"
 
-
+    flag = 0
 
     for i in repo_list:
         #print i
         print repo_list[i]
-        get_commits_list(i, repo_list[i])
+        res = get_commits_list(i, repo_list[i])
+        if res == False:
+            """新しいcommitの通知"""
+            slack_notice(i, repo_list[i])
+            flag = 1
+
+    if flag = 0:
+        test()
 
 
 if __name__ == "__main__":
