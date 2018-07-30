@@ -48,25 +48,9 @@ def get_commits_list(repo_name, URL):
         return False
 
 def slack_notice(repo_name, URL):
-    slack_token = "xoxp-41888577685-164597196115-360693330051-bba97f8524c1065e466011d7535de70a"
-
-    web_hook = "https://hooks.slack.com/services/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"
+    web_hook = "hoge"
 
     message = "New Commits!\n" + repo_name + " : [" + URL + "]"
-
-    requests.post(web_hook, data = json.dumps({
-        'text': message, # 投稿するテキスト
-        'username': u'Ghost', # 投稿のユーザー名
-        'icon_emoji': u':ghost:', # 投稿のプロフィール画像に入れる絵文字
-        'link_names': 1, # メンションを有効にする
-    }))
-
-def test():
-    slack_token = "xoxp-41888577685-164597196115-360693330051-bba97f8524c1065e466011d7535de70a"
-
-    web_hook = "https://hooks.slack.com/services/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"
-
-    message = "新しいcommitはありません"
 
     requests.post(web_hook, data = json.dumps({
         'text': message, # 投稿するテキスト
